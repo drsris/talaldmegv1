@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iskolai Regisztráció – Talaldmeg.hu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .left, .right {
+      padding: 3rem;
+      flex: 1;
+    }
+
+    .left {
+      background-color: #121212;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .left p {
+      font-size: 1.05rem;
+      color: #bbbbbb;
+      line-height: 1.7;
+    }
+
+    .right {
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background-color: #2a2a2a;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #3a3a3a;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: #999;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      background-color: #00d4ff;
+      color: #0f0f0f;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00b8de;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+        padding: 2rem;
+      }
+
+      .left {
+        order: 2;
+        text-align: center;
+      }
+
+      .right {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1>Miért biztonságos?</h1>
+    <p>
+      A Talaldmeg.hu-nál kiemelten fontos számunkra a felhasználóink adatainak védelme. Nem kérünk érzékeny információkat,
+      csak az iskolád nevét, keresztneved és egy általad választott közösségi elérhetőséget (pl. Instagram). <br><br>
+      Az adataidat nem adjuk tovább, nem használjuk marketing célra, és bármikor kérheted azok törlését. A célunk csupán az, hogy
+      megkönnyítsük az új osztálytársak megismerését a tanév előtt – gyorsan, egyszerűen és biztonságosan.
+    </p>
+  </div>
+
+  <div class="right">
+    <div class="form-container">
+      <h2>Regisztráció</h2>
+      <form action="#" method="post">
+        <label for="name">Keresztnév</label>
+        <input type="text" id="name" name="name" placeholder="Pl.: Bence" required />
+
+<label for="school">Iskola neve</label>
+<select id="school" name="school" required>
+  <option value="" disabled selected>Válassz iskolát</option>
+
+  <!-- Baja -->
+  <option value="Baja Bányai Júlia Technikum (Baja)">Baja Bányai Júlia Technikum (Baja)</option>
+  <option value="Bereczki Máté Élelmiszeripari Technikum (Baja)">Bereczki Máté Élelmiszeripari Technikum (Baja)</option>
+  <option value="Jelky András Technikum (Baja)">Jelky András Technikum (Baja)</option>
+
+  <!-- Budapest -->
+  <option value="Fazekas Mihály Gimnázium (Budapest)">Fazekas Mihály Gimnázium (Budapest)</option>
+  <option value="ELTE Trefort Ágoston Gyakorló Gimnázium (Budapest)">ELTE Trefort Ágoston Gyakorló Gimnázium (Budapest)</option>
+  <option value="Budai Ciszterci Szent Imre Gimnázium (Budapest)">Budai Ciszterci Szent Imre Gimnázium (Budapest)</option>
+  <option value="Veres Pálné Gimnázium (Budapest)">Veres Pálné Gimnázium (Budapest)</option>
+  <option value="Szent István Gimnázium (Budapest)">Szent István Gimnázium (Budapest)</option>
+  <option value="BMSZC Bláthy Ottó Technikum (Budapest)">BMSZC Bláthy Ottó Technikum (Budapest)</option>
+
+  <!-- Szeged -->
+  <option value="Radnóti Miklós Kísérleti Gimnázium (Szeged)">Radnóti Miklós Kísérleti Gimnázium (Szeged)</option>
+  <option value="Szegedi SZC Vedres István Technikum (Szeged)">Szegedi SZC Vedres István Technikum (Szeged)</option>
+
+  <!-- Debrecen -->
+  <option value="Fazekas Mihály Gimnázium (Debrecen)">Fazekas Mihály Gimnázium (Debrecen)</option>
+  <option value="Debreceni SZC Mechwart András Technikum (Debrecen)">Debreceni SZC Mechwart András Technikum (Debrecen)</option>
+
+  <!-- Pécs -->
+  <option value="Janus Pannonius Gimnázium (Pécs)">Janus Pannonius Gimnázium (Pécs)</option>
+  <option value="Pécsi SZC Zipernowsky Károly Technikum (Pécs)">Pécsi SZC Zipernowsky Károly Technikum (Pécs)</option>
+
+  <!-- Győr -->
+  <option value="Révai Miklós Gimnázium (Győr)">Révai Miklós Gimnázium (Győr)</option>
+  <option value="Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum (Győr)">Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum (Győr)</option>
+
+  <!-- Miskolc -->
+  <option value="Herman Ottó Gimnázium (Miskolc)">Herman Ottó Gimnázium (Miskolc)</option>
+  <option value="Miskolci SZC Kandó Kálmán Informatikai Technikum (Miskolc)">Miskolci SZC Kandó Kálmán Informatikai Technikum (Miskolc)</option>
+
+  <!-- Eger -->
+<option value="Eszterházy Károly Katolikus Egyetem Gyakorló Gimnáziuma (Eger)">Eszterházy Károly Katolikus Egyetem Gyakorló Gimnáziuma (Eger)</option>
+<option value="Neumann János Gimnázium, Technikum és Kollégium (Eger)">Neumann János Gimnázium, Technikum és Kollégium (Eger)</option>
+
+<!-- Székesfehérvár -->
+<option value="Teleki Blanka Gimnázium (Székesfehérvár)">Teleki Blanka Gimnázium (Székesfehérvár)</option>
+<option value="Széchenyi István Műszaki Technikum (Székesfehérvár)">Széchenyi István Műszaki Technikum (Székesfehérvár)</option>
+
+<!-- Veszprém -->
+<option value="Lovassy László Gimnázium (Veszprém)">Lovassy László Gimnázium (Veszprém)</option>
+<option value="Vetési Albert Gimnázium (Veszprém)">Vetési Albert Gimnázium (Veszprém)</option>
+
+<!-- Szolnok -->
+<option value="Verseghy Ferenc Gimnázium (Szolnok)">Verseghy Ferenc Gimnázium (Szolnok)</option>
+<option value="Szolnoki SZC Baross Gábor Műszaki Technikum (Szolnok)">Szolnoki SZC Baross Gábor Műszaki Technikum (Szolnok)</option>
+
+<!-- Kaposvár -->
+<option value="Táncsics Mihály Gimnázium (Kaposvár)">Táncsics Mihály Gimnázium (Kaposvár)</option>
+<option value="Kaposvári SZC Eötvös Loránd Műszaki Technikum (Kaposvár)">Kaposvári SZC Eötvös Loránd Műszaki Technikum (Kaposvár)</option>
+
+<!-- Nyíregyháza -->
+<option value="Krúdy Gyula Gimnázium (Nyíregyháza)">Krúdy Gyula Gimnázium (Nyíregyháza)</option>
+<option value="Nyíregyházi SZC Bánki Donát Műszaki Technikum (Nyíregyháza)">Nyíregyházi SZC Bánki Donát Műszaki Technikum (Nyíregyháza)</option>
+
+<!-- Tatabánya -->
+<option value="Tatabányai Árpád Gimnázium (Tatabánya)">Tatabányai Árpád Gimnázium (Tatabánya)</option>
+<option value="Tatabányai SZC Bláthy Ottó Műszaki Technikum (Tatabánya)">Tatabányai SZC Bláthy Ottó Műszaki Technikum (Tatabánya)</option>
+
+<!-- Zalaegerszeg -->
+<option value="Zrínyi Miklós Gimnázium (Zalaegerszeg)">Zrínyi Miklós Gimnázium (Zalaegerszeg)</option>
+<option value="Zalaegerszegi SZC Deák Ferenc Technikum (Zalaegerszeg)">Zalaegerszegi SZC Deák Ferenc Technikum (Zalaegerszeg)</option>
+
+<!-- Szekszárd -->
+<option value="Garay János Gimnázium (Szekszárd)">Garay János Gimnázium (Szekszárd)</option>
+<option value="Szekszárdi SZC Ady Endre Technikum (Szekszárd)">Szekszárdi SZC Ady Endre Technikum (Szekszárd)</option>
+
+<!-- Salgótarján -->
+<option value="Bolyai János Gimnázium (Salgótarján)">Bolyai János Gimnázium (Salgótarján)</option>
+<option value="Salgótarjáni SZC Stromfeld Aurél Technikum (Salgótarján)">Salgótarjáni SZC Stromfeld Aurél Technikum (Salgótarján)</option>
+
+<!-- Békéscsaba -->
+<option value="Andrássy Gyula Gimnázium (Békéscsaba)">Andrássy Gyula Gimnázium (Békéscsaba)</option>
+<option value="Békéscsabai SZC Vásárhelyi Pál Technikum (Békéscsaba)">Békéscsabai SZC Vásárhelyi Pál Technikum (Békéscsaba)</option>
+
+<!-- Hódmezővásárhely -->
+<option value="Bethlen Gábor Református Gimnázium (Hódmezővásárhely)">Bethlen Gábor Református Gimnázium (Hódmezővásárhely)</option>
+<option value="Hódmezővásárhelyi SZC Eötvös József Technikum (Hódmezővásárhely)">Hódmezővásárhelyi SZC Eötvös József Technikum (Hódmezővásárhely)</option>
+
+<!-- Szentendre -->
+<option value="Ferences Gimnázium (Szentendre)">Ferences Gimnázium (Szentendre)</option>
+
+<!-- Dunakeszi -->
+<option value="Radnóti Miklós Gimnázium (Dunakeszi)">Radnóti Miklós Gimnázium (Dunakeszi)</option>
+
+<!-- Gödöllő -->
+<option value="Premontrei Szent Norbert Gimnázium (Gödöllő)">Premontrei Szent Norbert Gimnázium (Gödöllő)</option>
+
+<!-- Cegléd -->
+<option value="Kossuth Lajos Gimnázium (Cegléd)">Kossuth Lajos Gimnázium (Cegléd)</option>
+
+<!-- Kecskemét -->
+<option value="Katona József Gimnázium (Kecskemét)">Katona József Gimnázium (Kecskemét)</option>
+<option value="Kecskeméti SZC Kada Elek Technikum (Kecskemét)">Kecskeméti SZC Kada Elek Technikum (Kecskemét)</option>
+
+<!-- Csorna -->
+<option value="Hunyadi János Gimnázium, Technikum és Kollégium (Csorna)">Hunyadi János Gimnázium, Technikum és Kollégium (Csorna)</option>
+<option value="Csornai SZC Csukás Zoltán Mezőgazdasági Technikum és Szakképző Iskola (Csorna)">Csornai SZC Csukás Zoltán Mezőgazdasági Technikum és Szakképző Iskola (Csorna)</option>
+
+<!-- Kapuvár -->
+<option value="Bánfalvi Péter Gimnázium és Technikum (Kapuvár)">Bánfalvi Péter Gimnázium és Technikum (Kapuvár)</option>
+<option value="Széchenyi István Baptista Középiskola (Kapuvár)">Széchenyi István Baptista Középiskola (Kapuvár)</option>
+
+<!-- Fertőd -->
+<option value="Fertődi Esterházy Miklós Technikum és Szakképző Iskola (Fertőd)">Fertődi Esterházy Miklós Technikum és Szakképző Iskola (Fertőd)</option>
+
+<!-- Beled -->
+<option value="Beledi Fáy András Technikum és Szakképző Iskola (Beled)">Beledi Fáy András Technikum és Szakképző Iskola (Beled)</option>
+
+<!-- Sopron (közeli nagyváros, kiegészítésként) -->
+<option value="Berzsenyi Dániel Evangélikus Gimnázium (Sopron)">Berzsenyi Dániel Evangélikus Gimnázium (Sopron)</option>
+<option value="Széchenyi István Gimnázium (Sopron)">Széchenyi István Gimnázium (Sopron)</option>
+<option value="Soproni SZC Handler Nándor Technikum (Sopron)">Soproni SZC Handler Nándor Technikum (Sopron)</option>
+<option value="Soproni SZC Vas- és Villamosipari Technikum (Sopron)">Soproni SZC Vas- és Villamosipari Technikum (Sopron)</option>
+</select>
+
+
+<label for="social-type">Közösségi platform:</label>
+<select id="social-type" name="social-type" required>
+  <option value="" disabled selected>Válassz platformot</option>
+  <option value="Discord">Discord</option>
+  <option value="Instagram">Instagram</option>
+  <option value="TikTok">TikTok</option>
+  <option value="Snapchat">Snapchat</option>
+  <option value="Facebook">Facebook</option>
+</select>
+
+<label for="social-username">Felhasználónév:</label>
+<input type="text" id="social-username" name="social-username" placeholder="Íde ird a választott social neved" required>
+
+
+        <button type="submit">Küldés</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
