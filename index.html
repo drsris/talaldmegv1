@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talaldmeg.hu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      max-width: 600px;
+      color: #bbbbbb;
+      margin-bottom: 2rem;
+    }
+
+    .subscribe-button {
+      background-color: #00d4ff;
+      color: #0f0f0f;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .subscribe-button:hover {
+      background-color: #00b7da;
+      transform: scale(1.05);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin-top: 3rem;
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    .card {
+      background-color: #1b1b1b;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 30px rgba(0, 212, 255, 0.2);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #cccccc;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subscribe-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.webp" alt="Talaldmeg.hu logo" />
+      <span class="logo-text">Talaldmeg.hu</span>
+    </div>
+  </header>
+
+  <main>
+    <h1>Ismerd meg új osztálytársaid még a nyár folyamán!</h1>
+    <p class="description">A Talaldmeg.hu segítségével már iskola előtt kapcsolatba léphetsz új osztálytársaiddal – biztonságosan, egyszerűen, extra adatok megadása nélkül.</p>
+    <a href="iskolam.html" class="subscribe-button">Regisztráció</a>
+
+    <section class="cards">
+      <div class="card">
+        <h2>📚 Hogyan működik?</h2>
+        <p>Csak néhány alapadatot kell megadnod, például a neved, az iskolád nevét és egy közösségi elérhetőséget (Instagram, Facebook, stb.).</p>
+      </div>
+      <div class="card">
+        <h2>🚀 Miért jó ez neked?</h2>
+        <p>Már a tanév kezdete előtt ismerős arcokat láthatsz, így nem kell idegenként belépned az osztályterembe.</p>
+      </div>
+      <div class="card">
+        <h2>✉️ Kapcsolat</h2>
+        <p>Kérdésed van? Vedd fel velünk a kapcsolatot – örömmel segítünk!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Talaldmeg.hu – Minden jog fenntartva
+  </footer>
+</body>
+</html>
