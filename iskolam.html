@@ -160,7 +160,7 @@
     <div class="right">
       <div class="form-container">
         <h2>Regisztráció</h2>
-        <form action="#" method="post">
+<form action="tanulok.html" method="get">
           <label for="name">Keresztnév</label>
           <input type="text" id="name" name="name" placeholder="Pl.: Bence" required />
 
@@ -298,7 +298,161 @@
 <label for="social-username">Felhasználónév:</label>
 <input type="text" id="social-username" name="social-username" placeholder="Pl.: ravbey#1234 vagy @felhasznalonev" required>
 
-          <button type="submit">Küldés</button>
+<div class="bg-gray-900 text-white py-8">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <div class="inline-block relative w-64">
+      <select class="block appearance-none w-full bg-gray-800 border border-gray-700 text-white py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-indigo-500">
+        <option disabled selected>Válassz egy lehetőséget</option>
+        <option>Gimnázium</option>
+        <option>Technikum</option>
+        <option>Kollégium</option>
+        <option>Szakgimnázium</option>
+        <option>Szakközépiskola</option>
+        <option>Általános iskola</option>
+        <option>Egyetem</option>
+        <option>Főiskola</option>
+        <option>Nem tanulok jelenleg</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+      </div>
+    </div>
+  </div>
+</div>
+
+<select name="szakma" id="szakma">
+  <!-- Baja -->
+  <option value="Vendéglátói iskola (Baja Bányai Júlia)">Vendéglátói iskola (Baja Bányai Júlia)</option>
+  <option value="Élelmiszeripari technikus (Bereczki Máté Élelmiszeripari)">Élelmiszeripari technikus (Bereczki Máté Élelmiszeripari)</option>
+  <option value="Kereskedelmi és webáruházi technikus (Jelky András)">Kereskedelmi és webáruházi technikus (Jelky András)</option>
+
+  <!-- Budapest -->
+  <option value="Érettségi (Fazekas Mihály Gimnázium)">Érettségi (Fazekas Mihály Gimnázium)</option>
+  <option value="Érettségi (ELTE Trefort Ágoston Gyakorló Gimnázium)">Érettségi (ELTE Trefort Ágoston)</option>
+  <option value="Érettségi (Budai Ciszterci Szent Imre)">Érettségi (Budai Ciszterci Szent Imre)</option>
+  <option value="Érettségi (Veres Pálné Gimnázium)">Érettségi (Veres Pálné)</option>
+  <option value="Érettségi (Szent István Gimnázium)">Érettségi (Szent István)</option>
+  <option value="Szoftverfejlesztő és -tesztelő technikus (BMSZC Bláthy Ottó)">Szoftverfejlesztő és -tesztelő technikus (BMSZC Bláthy Ottó)</option>
+
+  <!-- Szeged -->
+  <option value="Érettségi (Radnóti Miklós Kísérleti Gimnázium)">Érettségi (Radnóti Miklós Kísérleti)</option>
+  <option value="Épületgépész technikus (Vedres István Technikum)">Épületgépész technikus (Vedres István)</option>
+
+  <!-- Debrecen -->
+  <option value="Érettségi (Fazekas Mihály Gimnázium Debrecen)">Érettségi (Fazekas Mihály Debrecen)</option>
+  <option value="Gépgyártástechnológiai technikus (Mechwart András)">Gépgyártástechnológiai technikus (Mechwart András)</option>
+
+  <!-- Pécs -->
+  <option value="Érettségi (Janus Pannonius Gimnázium)">Érettségi (Janus Pannonius)</option>
+  <option value="Villamosipari technikus (Zipernowsky Károly)">Villamosipari technikus (Zipernowsky Károly)</option>
+
+  <!-- Győr -->
+  <option value="Érettségi (Révai Miklós Gimnázium)">Érettségi (Révai Miklós)</option>
+  <option value="Informatikai technikus (Jedlik Ányos)">Informatikai technikus (Jedlik Ányos)</option>
+
+  <!-- Miskolc -->
+  <option value="Érettségi (Herman Ottó Gimnázium)">Érettségi (Herman Ottó)</option>
+  <option value="Informatikai technikus (Kandó Kálmán)">Informatikai technikus (Kandó Kálmán)</option>
+
+  <!-- Eger -->
+  <option value="Érettségi (Eszterházy Károly Gyakorló Gimnázium)">Érettségi (Eszterházy Károly)</option>
+  <option value="Szoftverfejlesztő és -tesztelő technikus (Neumann János)">Szoftverfejlesztő és -tesztelő technikus (Neumann János)</option>
+
+  <!-- Székesfehérvár -->
+  <option value="Érettségi (Teleki Blanka Gimnázium)">Érettségi (Teleki Blanka)</option>
+  <option value="Gépész technikus (Széchenyi István)">Gépész technikus (Széchenyi István)</option>
+
+  <!-- Veszprém -->
+  <option value="Érettségi (Lovassy László Gimnázium)">Érettségi (Lovassy László)</option>
+  <option value="Érettségi (Vetési Albert Gimnázium)">Érettségi (Vetési Albert)</option>
+
+  <!-- Szolnok -->
+  <option value="Érettségi (Verseghy Ferenc Gimnázium)">Érettségi (Verseghy Ferenc)</option>
+  <option value="Villamosipari technikus (Baross Gábor Technikum)">Villamosipari technikus (Baross Gábor)</option>
+
+  <!-- Kaposvár -->
+  <option value="Érettségi (Táncsics Mihály Gimnázium)">Érettségi (Táncsics Mihály)</option>
+  <option value="Gépgyártástechnológiai technikus (Eötvös Loránd Technikum)">Gépgyártástechnológiai technikus (Eötvös Loránd)</option>
+
+  <!-- Nyíregyháza -->
+  <option value="Érettségi (Krúdy Gyula Gimnázium)">Érettségi (Krúdy Gyula)</option>
+  <option value="Gépipari technikus (Bánki Donát Technikum)">Gépipari technikus (Bánki Donát)</option>
+
+  <!-- Tatabánya -->
+  <option value="Érettségi (Árpád Gimnázium)">Érettségi (Árpád Gimnázium)</option>
+  <option value="Villamosipari technikus (Bláthy Ottó Tatabánya)">Villamosipari technikus (Bláthy Ottó)</option>
+
+  <!-- Zalaegerszeg -->
+  <option value="Érettségi (Zrínyi Miklós Gimnázium)">Érettségi (Zrínyi Miklós)</option>
+  <option value="Közgazdasági technikus (Deák Ferenc Technikum)">Közgazdasági technikus (Deák Ferenc)</option>
+
+  <!-- Szekszárd -->
+  <option value="Érettségi (Garay János Gimnázium)">Érettségi (Garay János)</option>
+  <option value="Ügyviteli technikus (Ady Endre Technikum)">Ügyviteli technikus (Ady Endre)</option>
+
+  <!-- Salgótarján -->
+  <option value="Érettségi (Bolyai János Gimnázium)">Érettségi (Bolyai János)</option>
+  <option value="Épületgépész technikus (Stromfeld Aurél Technikum)">Épületgépész technikus (Stromfeld Aurél)</option>
+
+  <!-- Békéscsaba -->
+  <option value="Érettségi (Andrássy Gyula Gimnázium)">Érettségi (Andrássy Gyula)</option>
+  <option value="Víz- és csatornamű technikus (Vásárhelyi Pál Technikum)">Víz- és csatornamű technikus (Vásárhelyi Pál)</option>
+
+  <!-- Hódmezővásárhely -->
+  <option value="Érettségi (Bethlen Gábor Gimnázium)">Érettségi (Bethlen Gábor)</option>
+  <option value="Gépgyártástechnológiai technikus (Eötvös József Technikum)">Gépgyártástechnológiai technikus (Eötvös József)</option>
+
+  <!-- Szentendre -->
+  <option value="Érettségi (Ferences Gimnázium)">Érettségi (Ferences Gimnázium)</option>
+
+  <!-- Dunakeszi -->
+  <option value="Érettségi (Radnóti Miklós Gimnázium)">Érettségi (Radnóti Dunakeszi)</option>
+
+  <!-- Gödöllő -->
+  <option value="Érettségi (Premontrei Szent Norbert Gimnázium)">Érettségi (Premontrei Szent Norbert)</option>
+
+  <!-- Cegléd -->
+  <option value="Érettségi (Kossuth Lajos Gimnázium)">Érettségi (Kossuth Lajos)</option>
+
+  <!-- Kecskemét -->
+  <option value="Érettségi (Katona József Gimnázium)">Érettségi (Katona József)</option>
+  <option value="Pénzügyi-számviteli ügyintéző (Kada Elek Technikum)">Pénzügyi-számviteli ügyintéző (Kada Elek)</option>
+
+  <!-- Csorna -->
+  <option value="Érettségi (Hunyadi János Gimnázium)">Érettségi (Hunyadi János)</option>
+  <option value="Mezőgazdasági gépész technikus (Csukás Zoltán Technikum)">Mezőgazdasági gépész technikus (Csukás Zoltán)</option>
+
+  <!-- Kapuvár -->
+  <option value="Gépész technikus (Bánfalvi Péter Technikum)">Gépész technikus (Bánfalvi Péter)</option>
+</select>
+
+
+<form id="regForm">
+  <button type="submit">Regisztráció</button>
+</form>
+
+<script>
+  document.getElementById("regForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Ne küldje be az űrlapot
+    window.location.href = "tanulok.html"; // Átirányítás
+  });
+</script>
+
+<script>
+  const lista = document.getElementById("tanuloLista");
+
+  // Ellenőrzés, van-e új tanuló elmentve
+  const adat = localStorage.getItem("ujTanulo");
+  if (adat) {
+    const tanulo = JSON.parse(adat);
+    const li = document.createElement("li");
+    li.textContent = `${tanulo.nev} - ${tanulo.osztaly}`;
+    lista.appendChild(li);
+
+    // (Opcionális) töröld, ha nem kell megmaradnia
+    // localStorage.removeItem("ujTanulo");
+  }
+</script>
+
         </form>
       </div>
     </div>
