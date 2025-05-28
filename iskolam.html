@@ -6,14 +6,21 @@
   <title>Iskolai Regisztráció – Talaldmeg.hu</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0f0f0f;
       color: #fff;
+    }
+
+    main {
       display: flex;
       min-height: 100vh;
+      flex-direction: row;
     }
 
     .left, .right {
@@ -99,7 +106,7 @@
     }
 
     @media (max-width: 900px) {
-      body {
+      main {
         flex-direction: column;
       }
 
@@ -117,31 +124,50 @@
         order: 1;
       }
     }
+
+    @media (max-width: 600px) {
+      .left h1 {
+        font-size: 1.8rem;
+      }
+
+      .left p {
+        font-size: 0.95rem;
+      }
+
+      .form-container {
+        padding: 1.5rem;
+      }
+
+      input, select, button {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="left">
-    <h1>Miért biztonságos?</h1>
-    <p>
-      A Talaldmeg.hu-nál kiemelten fontos számunkra a felhasználóink adatainak védelme. Nem kérünk érzékeny információkat,
-      csak az iskolád nevét, keresztneved és egy általad választott közösségi elérhetőséget (pl. Instagram). <br><br>
-      Az adataidat nem adjuk tovább, nem használjuk marketing célra, és bármikor kérheted azok törlését. A célunk csupán az, hogy
-      megkönnyítsük az új osztálytársak megismerését a tanév előtt – gyorsan, egyszerűen és biztonságosan.
-    </p>
-  </div>
+  <main>
+    <div class="left">
+      <h1>Miért biztonságos?</h1>
+      <p>
+        A Talaldmeg.hu-nál kiemelten fontos számunkra a felhasználóink adatainak védelme. Nem kérünk érzékeny információkat,
+        csak az iskolád nevét, keresztneved és egy általad választott közösségi elérhetőséget (pl. Instagram). <br><br>
+        Az adataidat nem adjuk tovább, nem használjuk marketing célra, és bármikor kérheted azok törlését. A célunk csupán az, hogy
+        megkönnyítsük az új osztálytársak megismerését a tanév előtt – gyorsan, egyszerűen és biztonságosan.
+      </p>
+    </div>
 
-  <div class="right">
-    <div class="form-container">
-      <h2>Regisztráció</h2>
-      <form action="#" method="post">
-        <label for="name">Keresztnév</label>
-        <input type="text" id="name" name="name" placeholder="Pl.: Bence" required />
+    <div class="right">
+      <div class="form-container">
+        <h2>Regisztráció</h2>
+        <form action="#" method="post">
+          <label for="name">Keresztnév</label>
+          <input type="text" id="name" name="name" placeholder="Pl.: Bence" required />
 
-<label for="school">Iskola neve</label>
-<select id="school" name="school" required>
-  <option value="" disabled selected>Válassz iskolát</option>
-
-  <!-- Baja -->
+          <label for="school">Iskola neve</label>
+          <select id="school" name="school" required>
+            <option value="" disabled selected>Válassz iskolát</option>
+ <!-- Baja -->
   <option value="Baja Bányai Júlia Technikum (Baja)">Baja Bányai Júlia Technikum (Baja)</option>
   <option value="Bereczki Máté Élelmiszeripari Technikum (Baja)">Bereczki Máté Élelmiszeripari Technikum (Baja)</option>
   <option value="Jelky András Technikum (Baja)">Jelky András Technikum (Baja)</option>
@@ -257,9 +283,7 @@
 <option value="Széchenyi István Gimnázium (Sopron)">Széchenyi István Gimnázium (Sopron)</option>
 <option value="Soproni SZC Handler Nándor Technikum (Sopron)">Soproni SZC Handler Nándor Technikum (Sopron)</option>
 <option value="Soproni SZC Vas- és Villamosipari Technikum (Sopron)">Soproni SZC Vas- és Villamosipari Technikum (Sopron)</option>
-</select>
-
-
+          </select>
 <label for="social-type">Közösségi platform:</label>
 <select id="social-type" name="social-type" required>
   <option value="" disabled selected>Válassz platformot</option>
@@ -271,12 +295,12 @@
 </select>
 
 <label for="social-username">Felhasználónév:</label>
-<input type="text" id="social-username" name="social-username" placeholder="Íde ird a választott social neved" required>
+<input type="text" id="social-username" name="social-username" placeholder="Pl.: ravbey#1234 vagy @felhasznalonev" required>
 
-
-        <button type="submit">Küldés</button>
-      </form>
+          <button type="submit">Küldés</button>
+        </form>
+      </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
